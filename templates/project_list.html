@@ -4,6 +4,8 @@
 <div class="text-center my-5">
     <img src="{% static 'img/profile.JPG' %}" class="rounded-circle" width="120" height="120" alt="Profile Photo">
     <h2 class="mt-3">Parash Acharya</h2>
+    <p>parashacharya139@gmail.com</p>
+    <p>Bachelor in Computer Engineering</p>
 
 </div>
 
@@ -18,7 +20,9 @@
             <div class="card-body">
                 <h5 class="card-title">{{ project.title }}</h5>
                 <p class="card-text">{{ project.description|truncatechars:80 }}</p>
-                <a href="{{ project.link }}"  class="btn btn-primary">View Project</a>
+                <a href="{{ project.link }}"  class="btn btn-primary">Project code</a>
+                <a href="#"  class="btn btn-success">Edit</a>
+                <a href="#"  class="btn btn-danger">Delete</a>
             </div>
             <div class="card-footer text-muted">
                 {{ project.created_at|date:"M d, Y" }}

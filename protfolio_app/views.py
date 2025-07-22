@@ -8,3 +8,7 @@ def protfolio(request):
 def project_list(request):
     projects = Project.objects.all()
     return render(request, 'project_list.html', {'projects': projects})
+def project_edit(request, pk):
+    if request.method == "GET":
+        project = Project.objects.get(pk=pk)
+
