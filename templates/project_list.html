@@ -17,8 +17,8 @@
         <div class="card h-100 shadow-sm">
             <div class="card-body">
                 <h5 class="card-title">{{ project.title }}</h5>
-                <p class="card-text">{{ project.description|truncatechars:100 }}</p>
-                <a href="{{ project.link }}" target="_blank" class="btn btn-outline-primary">View Project</a>
+                <p class="card-text">{{ project.description|truncatechars:80 }}</p>
+                <a href="{{ project.link }}"  class="btn btn-primary">View Project</a>
             </div>
             <div class="card-footer text-muted">
                 {{ project.created_at|date:"M d, Y" }}
