@@ -1,8 +1,7 @@
 from django import forms
-from protfolio_app.models import Project
-
+from .models import Project
 
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
-        fileds =['title', 'description']
+        fields = ['title', 'description', 'link']
