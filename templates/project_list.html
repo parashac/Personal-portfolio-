@@ -3,14 +3,25 @@
 {% block content %}
 <div class="text-center my-5">
     <img src="{% static 'img/profile.JPG' %}" class="rounded-circle" width="120" height="120" alt="Profile Photo">
+
     <h2 class="mt-3">Parash Acharya</h2>
   <span class="material-symbols-outlined" style="vertical-align: middle">mail</span>
   parashacharya139@gmail.com
-
 <p>
   <span class="material-symbols-outlined " style="vertical-align: middle">school</span>
   Bachelor in Computer Engineering
 </p>
+<div class="d-flex justify-content-center align-items-center" style="height: 3vh;">
+ <a href="{% url 'project-create' %}" class="text-decoration-none text-dark">
+     <div class="card shadow-sm" style="width: 200px; height: 40px; background-color: lightblue;">
+        <div class="d-flex justify-content-center align-items-center ">
+
+        <span class="material-symbols-outlined" style="font-size: 30px;">add</span>
+
+    </div>
+  </div>
+     </a>
+</div>
 
 </div>
 
@@ -34,8 +45,8 @@
             </div>
         </div>
     </div>
-    {% empty %}
-    <p class="text-center">No projects added yet.</p>
     {% endfor %}
+
+
 </div>
 {% endblock content %}
